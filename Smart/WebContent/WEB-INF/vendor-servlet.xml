@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 	
+	<bean id="helpController"
+          class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+	
+	<bean name="vendorcontroller" class="serv.VendorController">  
+    	<property name="cacheSeconds" value="120"/>
+	</bean> 
+	<bean id="viewResolver"
+      class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+      	
+</bean>
+
+<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+ 
+	
+</beans>
